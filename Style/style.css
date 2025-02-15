@@ -582,7 +582,7 @@ label:hover {
     }
 
     .nav-logo img {
-        height: 8vh; /* Adjusted logo size for mobile */
+        height: 7vh; /* Adjusted logo size for mobile */
     }
 
     .nav-links {
