@@ -32,6 +32,9 @@ nav {
     top: 0px;
     left: 150px;
 }
+ .nav-logo img{
+        height: 8vh;
+    }
 
 .hamburger-menu{
     display: none;
