@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineverse Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <link rel="stylesheet" href="Style/tv.css">
+    <link rel="icon" type="image/png" href="Images/movie logo.png"> </head>
+<body>
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="Images/movie logo.png" alt="Logo">
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
+            <div class="search-container">
+                <input type="search" placeholder="Search" class="search">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+            <a href="index.html" target="_parent" class="nav-link">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+            <a href="movie.html" class="nav-link">
+                <i class="fa-solid fa-film"></i> Movies
+            </a>
+            <a href="tv.html" class="nav-link">
+                <i class="fa-solid fa-tv"></i> TV Shows
+            </a>
+            <a href="about.html" class="nav-link">
+                <i class="fa-solid fa-users"></i> About Us
+            </a>
+        </div>
+    </nav>
+
+
+
+    <main>
+        <section>
+            <div class="hero">
+                <div class="hero-text">
+            <h1>Under development</h1>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburgerMenu && navLinks) {
+        hamburgerMenu.addEventListener('click', function () {
+            // Toggle the 'active' class on the nav-links
+            navLinks.classList.toggle('active');
+        });
+    } else {
+        console.error('Hamburger menu or nav links not found!');
+    }
+});
+</script>
+</html>

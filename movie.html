@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineverse Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <link rel="stylesheet" href="Style/movie.css">
+    <link rel="icon" type="image/png" href="Images/movie logo.png"> <!-- Fixed rel & filename -->
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="Images/movie logo.png" alt="Logo">
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
+            <div class="search-container">
+                <input type="search" placeholder="Search" class="search">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+            <a href="index.html" target="_parent" class="nav-link">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+            <a href="movie.html" class="nav-link">
+                <i class="fa-solid fa-film"></i> Movies
+            </a>
+            <a href="tv.html" class="nav-link">
+                <i class="fa-solid fa-tv"></i> TV Shows
+            </a>
+            <a href="about.html" class="nav-link">
+                <i class="fa-solid fa-users"></i> About Us
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="hero-title" id="hero-title">Welcome to Cineverse Hub</h1>
+                <p class="hero-subtitle">Explore the world of movies and TV shows</p>
+            </div>
+        </section>
+
+        <section class="movie-sections">
+            <div class="movie-list">
+                <h2 class="section-title top">Top Movies</h2>
+                <!-- Add your movie list content here -->
+            </div>
+        </section>
+        <section class="tv-sections">
+            <h2 class="section-title">MOST POPULAR BY OUR VIEW</h2>
+        
+            <!-- First 5 Movies -->
+            <div class="tv-list">
+                <!-- Movie 1: The Dark Knight -->
+                <div class="list">
+                    <div class="pagination">
+                        <img src="Images/dark knight.jpg" alt="The Dark Knight">
+                    </div>
+                </div>
+                <div class="list-2">
+                    <div class="movie-header">
+                        <h1 class="film-name">The Dark Knight</h1>
+                        <h3 class="Director">
+                            Director: Christopher Nolan <br>
+                            Release Date: 2008 <br>
+                            Rating: 9.0/10 <br>
+                            Genre: Action, Crime, Drama
+                        </h3>
+                    </div>
+                    <div class="movie-description">
+                        <h3>
+                            Plot: When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept
+                            one of the greatest psychological and physical tests of his ability to fight injustice. <br>
+                            Cast: Christian Bale, Heath Ledger, Aaron Eckhart
+                        </h3>
+                        <h3>
+                            Trailer: <a href="https://www.youtube.com/watch?v=EXeTwQWrcwY" target="_blank">The Dark Knight</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Movie 2: The Godfather -->
+            <div class="tv-list">
+                <div class="list">
+                    <div class="pagination">
+                        <img src="Images/godfather.jpg" alt="The Godfather">
+                    </div>
+                </div>
+                <div class="list-2">
+                    <div class="movie-header">
+                        <h1 class="film-name">The Godfather</h1>
+                        <h3 class="Director">
+                            Director: Francis Ford Coppola <br>
+                            Release Date: 1972 <br>
+                            Rating: 9.2/10 <br>
+                            Genre: Crime, Drama
+                        </h3>
+                    </div>
+                    <div class="movie-description">
+                        <h3>
+                            Plot: The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son. <br>
+                            Cast: Marlon Brando, Al Pacino, James Caan
+                        </h3>
+                        <h3>
+                            Trailer: <a href="https://youtu.be/UaVTIH8mujA?feature=shared" target="_blank">The Godfather</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Movie 3: Inception -->
+            <div class="tv-list">
+                <div class="list">
+                    <div class="pagination">
+                        <img src="Images/inception.jpg" alt="Inception">
+                    </div>
+                </div>
+                <div class="list-2">
+                    <div class="movie-header">
+                        <h1 class="film-name">Inception</h1>
+                        <h3 class="Director">
+                            Director: Christopher Nolan <br>
+                            Release Date: 2010 <br>
+                            Rating: 8.8/10 <br>
+                            Genre: Action, Sci-Fi, Thriller
+                        </h3>
+                    </div>
+                    <div class="movie-description">
+                        <h3>
+                            Plot: A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O. <br>
+                            Cast: Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page
+                        </h3>
+                        <h3>
+                            Trailer: <a href="https://youtu.be/YoHD9XEInc0?feature=shared" target="_blank">Inception</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Movie 4: Interstellar -->
+            <div class="tv-list">
+                <div class="list">
+                    <div class="pagination">
+                        <img src="Images/interstellar.jpg" alt="Interstellar">
+                    </div>
+                </div>
+                <div class="list-2">
+                    <div class="movie-header">
+                        <h1 class="film-name">Interstellar</h1>
+                        <h3 class="Director">
+                            Director: Christopher Nolan <br>
+                            Release Date: 2014 <br>
+                            Rating: 8.6/10 <br>
+                            Genre: Adventure, Drama, Sci-Fi
+                        </h3>
+                    </div>
+                    <div class="movie-description">
+                        <h3>
+                            Plot: A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. <br>
+                            Cast: Matthew McConaughey, Anne Hathaway, Jessica Chastain
+                        </h3>
+                        <h3>
+                            Trailer: <a href="https://youtu.be/zSWdZVtXT7E?feature=shared" target="_blank">Interstellar</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Movie 5: The Shawshank Redemption -->
+            <div class="tv-list">
+                <div class="list">
+                    <div class="pagination">
+                        <img src="Images/The Shawshank Redemption.jpg" alt="The Shawshank Redemption">
+                    </div>
+                </div>
+                <div class="list-2">
+                    <div class="movie-header">
+                        <h1 class="film-name">The Shawshank Redemption</h1>
+                        <h3 class="Director">
+                            Director: Frank Darabont <br>
+                            Release Date: 1994 <br>
+                            Rating: 9.3/10 <br>
+                            Genre: Drama
+                        </h3>
+                    </div>
+                    <div class="movie-description">
+                        <h3>
+                            Plot: Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency. <br>
+                            Cast: Tim Robbins, Morgan Freeman, Bob Gunton
+                        </h3>
+                        <h3>
+                            Trailer: <a href="https://youtu.be/PLl99DlL6b4?feature=shared" target="_blank">The Shawshank Redemption</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="loader" class="loader">
+                <div class="spinner"></div> <!-- Spinner animation -->
+                <p>Loading...</p>
+            </div>
+        
+
+
+            <!-- "Show More" Button -->
+            <button id="show-more-btn">Show More</button>
+        
+            <!-- Hidden Movies (Movies 6 to 10) -->
+            <div class="hidden-movies">
+                <!-- Movie 6: The Lord of the Rings -->
+                <div class="tv-list">
+                    <div class="list">
+                        <div class="pagination">
+                            <img src="Images/lord ring.jpg" alt="The Lord of the Rings">
+                        </div>
+                    </div>
+                    <div class="list-2">
+                        <div class="movie-header">
+                            <h1 class="film-name">The Lord of the Rings: The Return of the King</h1>
+                            <h3 class="Director">
+                                Director: Peter Jackson <br>
+                                Release Date: 2003 <br>
+                                Rating: 9.0/10 <br>
+                                Genre: Action, Drama
+                            </h3>
+                        </div>
+                        <div class="movie-description">
+                            <h3>
+                                Plot: Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency. <br>
+                                Cast: Tim Robbins, Morgan Freeman, Bob Gunton
+                            </h3>
+                            <h3>
+                                Trailer: <a href="https://www.youtube.com/watch?v=6hB3S9bIaco" target="_blank">The Lord of the Rings</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Movie 7: Forrest Gump -->
+                <div class="tv-list">
+                    <div class="list">
+                        <div class="pagination">
+                            <img src="Images/Forrest Gump.jpg" alt="Forrest Gump">
+                        </div>
+                    </div>
+                    <div class="list-2">
+                        <div class="movie-header">
+                            <h1 class="film-name">Forrest Gump</h1>
+                            <h3 class="Director">
+                                Director: Robert Zemeckis <br>
+                                Release Date: 1994 <br>
+                                Rating: 8.8/10 <br>
+                                Genre: Drama, Romance
+                            </h3>
+                        </div>
+                        <div class="movie-description">
+                            <h3>
+                                Plot: The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold through the perspective of an Alabama man with an IQ of 75. <br>
+                                Cast: Tom Hanks, Robin Wright, Gary Sinise
+                            </h3>
+                            <h3>
+                                Trailer: <a href="https://www.youtube.com/watch?v=bLvqoHBptjg" target="_blank">Forrest Gump</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Movie 8: The Matrix -->
+                <div class="tv-list">
+                    <div class="list">
+                        <div class="pagination">
+                            <img src="Images/martix.jpg" alt="The Matrix">
+                        </div>
+                    </div>
+                    <div class="list-2">
+                        <div class="movie-header">
+                            <h1 class="film-name">The Matrix</h1>
+                            <h3 class="Director">
+                                Director: The Wachowskis <br>
+                                Release Date: 1999 <br>
+                                Rating: 8.7/10 <br>
+                                Genre: Action, Sci-Fi
+                            </h3>
+                        </div>
+                        <div class="movie-description">
+                            <h3>
+                                Plot: A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers. <br>
+                                Cast: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss
+                            </h3>
+                            <h3>
+                                Trailer: <a href="https://www.youtube.com/watch?v=vKQi3bBA1y8" target="_blank">The Matrix</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Movie 9: Gladiator -->
+                <div class="tv-list">
+                    <div class="list">
+                        <div class="pagination">
+                            <img src="Images/gladitalor.jpg" alt="Gladiator">
+                        </div>
+                    </div>
+                    <div class="list-2">
+                        <div class="movie-header">
+                            <h1 class="film-name">Gladiator</h1>
+                            <h3 class="Director">
+                                Director: Ridley Scott <br>
+                                Release Date: 2000 <br>
+                                Rating: 8.5/10 <br>
+                                Genre: Action, Drama
+                            </h3>
+                        </div>
+                        <div class="movie-description">
+                            <h3>
+                                Plot: A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery. <br>
+                                Cast: Russell Crowe, Joaquin Phoenix, Connie Nielsen
+                            </h3>
+                            <h3>
+                                Trailer: <a href="https://www.youtube.com/watch?v=owK1qxDselE" target="_blank">Gladiator</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Movie 10: Titanic -->
+                <div class="tv-list">
+                    <div class="list">
+                        <div class="pagination">
+                            <img src="Images/titanic.jpg" alt="Titanic">
+                        </div>
+                    </div>
+                    <div class="list-2">
+                        <div class="movie-header">
+                            <h1 class="film-name">Titanic</h1>
+                            <h3 class="Director">
+                                Director: James Cameron <br>
+                                Release Date: 1997 <br>
+                                Rating: 7.8/10 <br>
+                                Genre: Drama, Romance
+                            </h3>
+                        </div>
+                        <div class="movie-description">
+                            <h3>
+                                Plot: A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic. <br>
+                                Cast: Leonardo DiCaprio, Kate Winslet, Billy Zane
+                            </h3>
+                            <h3>
+                                Trailer: <a href="https://www.youtube.com/watch?v=2e-eXJ6HgkQ" target="_blank">Titanic</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="about-section">
+            <div class="about-content">
+                <h2 class="section-title">About Us</h2>
+                <p class="about">Welcome to Cineverse Hub, your ultimate destination for exploring the world of movies and TV shows. Stay tuned for more exciting content and updates!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Cineverse Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+    
+    document.addEventListener('DOMContentLoaded', function () {
+    const showMoreBtn = document.getElementById('show-more-btn');
+    const hiddenMovies = document.querySelector('.hidden-movies');
+    const loader = document.getElementById('loader');
+
+    if (showMoreBtn && hiddenMovies && loader) {
+        showMoreBtn.addEventListener('click', function () {
+            // Show the loader
+            loader.style.display = 'flex';
+
+            // Simulate a delay (e.g., fetching data or processing)
+            setTimeout(() => {
+                // Hide the loader after the delay
+                loader.style.display = 'none';
+
+                // Show the hidden movies
+                hiddenMovies.style.display = 'block';
+
+                // Trigger the fade-in animation
+                setTimeout(() => {
+                    hiddenMovies.style.opacity = '1';
+                }, 10); // Small delay to allow the display change to take effect
+
+                // Hide the "Show More" button after clicking
+                showMoreBtn.style.display = 'none';
+            }, 3000); // 3 seconds delay for demonstration
+        });
+    } else {
+        console.error('Button, hidden movies container, or loader not found!');
+    }
+});
+
+
+    </script>
+</body>
+</html>

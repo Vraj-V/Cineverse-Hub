@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineverse Hub</title>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+     <link rel="stylesheet" href="Style/style.css">
+    <link rel="icon" type="image/png" href="Images/movie logo.png"> <!-- Fixed rel & filename -->
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="Images/movie logo.png" alt="Logo">
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
+            <input type="search" placeholder="Search" class="search"> <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-house"></i><a href="index.html" target="_parent" class="nav-link">Home</a>
+            <i class="fa-solid fa-film"></i><a href="movie.html" class="nav-link">Movies</a>
+            <i class="fa-solid fa-tv"></i><a href="tv.html" class="nav-link">TV Shows</a>
+            <i class="fa-solid fa-users"></i><a href="about.html" class="nav-link">About us</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="hero-title">Welcome Cineverse Hub</h1>
+                <p class="hero-subtitle">Discover the latest and greatest movies, TV shows, and more.</p>
+                <a href="movie.html" class="hero-btn"><u>Discover Now</u></a>
+            </div>
+    </section>
+
+
+    <!-- Popular Movies section -->
+
+    </main>
+
+    <section class="section">
+        <h2 class="section-title">Popular Movies</h2>
+
+        <div class="grid">
+            <div class="grid-item">
+                <a href="#"><img src="Images/jailer.jpg" alt=""></a>
+                <h3 class="grid-item-title">Inception <i class="fa-solid fa-earth-europe"></i></h3>
+            </div>
+
+            <div class="grid-item">
+                <a href="#"><img src="Images/movie-image-1.jpg" alt=""></a>
+                <h3 class="grid-item-title">Avatar The Way Of Water </h3>
+            </div>
+
+            <div class="grid-item">
+                <a href="#"><img src="Images/dark knight.jpg" alt=""></a>
+                <h3 class="grid-item-title">The Dark Knight</h3>
+            </div>
+
+            <div class="grid-item">
+                <a href=""><img src="Images/Interstellar.jpg" alt=""></a>
+                <h3 class="grid-item-title">Interstellar</h3>
+            </div>
+
+            <div class="grid-item">
+                <a href=""><img src="Images/RRR.jpg" alt=""></a>
+                <h3 class="grid-item-title">RRR</h3>
+                </div>
+
+                <div class="grid-item">
+                    <a href="#"><img src="Images/MAHARAJA.jpg" alt=""></a>
+                    <h3 class="grid-item-title">American Psyhco <i class="fa-solid fa-skull-crossbones"></i></h3>
+                </div>
+
+                <div class="grid-item">
+                    <a href="#"><img src="Images/spider man.jpg" alt=""></a>
+                    <h3 class="grid-item-title">Spider Man Across the Spider verse <i class="fa-solid fa-spider">  </i></h3>
+                </div>
+
+                <div class="grid-item">
+                    <a href="#"><img src="Images/come and see.jpg" alt=""></a>
+                    <h3 class="grid-item-title">Come and See</h3>
+                </div>
+                
+        </div>
+
+    </section>
+
+    <!-- Movies Star-->
+
+    <section class="stars">
+        <div class="container">
+            <h2 class="star-title">Popular Stars</h2>
+            <button class="arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel">
+                <div class="movies">
+                    <img src="Images/SRK.jpg" alt="SRK">
+                    <h4 class="actor-name">Tom Cruise</h4>
+                </div>
+                <div class="movies">
+                    <img src="Images/Allue.jpg" alt="Allue">
+                    <h4 class="actor-name">Chris Hemsworth</h4>
+                </div>
+                <div class="movies">
+                    <img src="Images/johnny deep.jpg" alt="Johnny Depp">
+                    <h4 class="actor-name">Johnny Depp</h4>
+                </div>
+                <div class="movies">
+                    <img src="Images/henry cavil.jpg" alt="Henry Cavill">
+                    <h4 class="actor-name">Henry Cavill</h4>
+                </div>
+                <div class="movies">
+                    <img src="Images/Ranveer.jpg" alt="Ranveer Kapoor">
+                    <h4 class="actor-name">Ranveer Kapoor</h4>
+                </div>
+                <div class="movies">
+                    <img src="Images/Akshay Kumar.jpg" alt="Akshay Kumar">
+                    <h4 class="actor-name">Akshay Kumar</h4>
+                </div>
+                <div class="movies">
+                    <img src="Images/Christian Bale.jpg" alt="Christian Bale">
+                    <h4 class="actor-name">Christian Bale</h4>
+                </div>
+            </div>
+            <button class="arrow next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    <script src="script.js"></script> <!-- Added missing closing script tag -->
+
+
+    <section class="T.v.shows">
+        <h2 class="show-title">Top 3 TV Shows</h2>
+        <div class="shows">
+            <div class="Watch">
+                <h3 class="trending">#1st Trending</h3>
+                <div class="watch-content">
+                    <img src="Images/Money heist.jpg" alt="Money Heist">
+                    <div class="watch-detail">
+                        <h3>Money Heist</h3>
+                        <span class="gener">Crime</span>
+                        <p class="season">Season 5</p>
+                        <p class="details">Money Heist (Spanish: La Casa de Papel) is a Spanish heist crime drama series created by Álex Pina. The show follows a group of robbers, led by the enigmatic "Professor," as they execute highly strategic heists on the Royal Mint of Spain and the Bank of Spain. The series is known for its intense plot twists, complex characters, and themes of resistance and rebellion. It gained international popularity after being acquired by Netflix, becoming one of the most-watched non-English series worldwide. The show's iconic red jumpsuits and Salvador Dalí masks have also become symbolic of its unique style.</p>
+                        <button class="watch-btn"> Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shows">
+            <div class="Watch">
+                <h3 class="trending">#  2nd Trending</h3>
+                <div class="watch-content">
+                    <img src="Images/strange things.jpg" alt="Money Heist">
+                    <div class="watch-detail">
+                        <h3>Stranger Things</h3>
+                        <span class="gener">Horror</span>
+                        <p class="season">Season 5</p>
+                        <p class="details">Stranger Things is an American science fiction horror series created by the Duffer Brothers. The show is set in the 1980s in the fictional town of Hawkins, Indiana, and follows a group of kids who encounter supernatural forces and government conspiracies. The series is known for its nostalgic references to 1980s pop culture, as well as its compelling characters and suspenseful storytelling. Stranger Things has been praised for its performances, writing, and visual effects, and has become a cultural phenomenon since its debut on Netflix in 2016.</p></p>
+                        <button class="watch-btn"> Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="shows">
+            <div class="Watch">
+                <h3 class="trending">#  3rd Trending</h3>
+                <div class="watch-content">
+                    <img src="Images/last us.jpg" alt="Money Heist">
+                    <div class="watch-detail">
+                        <h3>The Last Us</h3>
+                        <span class="gener">Drama</span>
+                        <p class="season">Season 3</p>
+                        <b class="details"> <b>The Last of Us</b> is a post-apocalyptic drama series based on the popular video game by <b>Naughty Dog</b>. Set in a world devastated by a deadly fungal infection, it follows Joel, a hardened survivor, and Ellie, a teenage girl who may hold the key to humanity's survival. As they journey across the dangerous wastelands of the U.S., they encounter ruthless enemies, emotional struggles, and deep moral dilemmas. The show explores themes of survival, love, loss, and the bond between its lead characters. Praised for its storytelling, acting, and world-building, it has become one of the most acclaimed TV series.</p>
+                        <button class="watch-btn"> Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shows">
+            <div class="Watch">
+                <h3 class="trending">#  4rd Trending</h3>
+                <div class="watch-content">
+                    <img src="Images/friends.jpg" alt="Money Heist">
+                    <div class="watch-detail">
+                        <h3>F.R.I.E.N.D.S</h3>
+                        <span class="gener">Comdey</span>
+                        <p class="season">Season 10</p>
+                        <p class="par-details">
+                            <span>Friends</span> is a post-apocalyptic drama series based on the popular video game by <b>Naughty Dog</b>. 
+                            Set in a world devastated by a deadly fungal infection, it follows Joel, a hardened survivor, and Ellie, a teenage girl who may hold the key to humanity's survival. 
+                            As they journey across the dangerous wastelands of the U.S., they encounter ruthless enemies, emotional struggles, and deep moral dilemmas. 
+                            The show explores themes of survival, love, loss, and the bond between its lead characters. 
+                            Praised for its storytelling, acting, and world-building, it has become one of the most acclaimed TV series.
+                        </p>
+                        <button class="watch-btn"> Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section>
+    <div class="login-section">
+        <div class="login">
+            <h2>Login</h2>
+            <form>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+</section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <p>&copy; 2021 Cineverse Hub</p>
+
+        </div>
+    </footer>
+</body>
+</html>
+
