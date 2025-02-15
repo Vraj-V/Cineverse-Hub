@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    overflow-x: hidden;
+    width: 100%; /* Prevents horizontal scrolling */
+    position: relative;
+}
+
+
+/* Navigation */
+nav {
+    padding-top: 10px;
+    background-color: #000000;
+    color: #ececec;
+    padding: 10px;
+    height: 11vh;
+    width: 100%;
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Vertically center items */
+    justify-content: end;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    border-bottom: 2px solid white;
+}
+
+.nav-logo {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+
+.hamburger-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    position: relative;
+    width: 250px; /* Adjust width as needed */
+}
+
+.search {
+    width: 100%;
+    padding: 10px 20px 10px 40px;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+    outline: none; /* Remove default outline */
+}
+
+.search-icon {
+    position: absolute;
+    right: 20px; /* Adjust position as needed */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    color: #888; /* Icon color */
+    font-size: 1rem; /* Icon size */
+    pointer-events: none; /* Ensure the icon doesn't interfere with input clicks */
+}
+
+.search:focus {
+    border-color: coral; /* Change border color on focus */
+}
+
+.search-icon {
+    transition: color 0.3s ease-in-out;
+}
+
+.search-container:hover .search-icon {
+    color: coral; /* Change icon color on hover */
+}
+
+.nav-links a {
+    color: #ececec;
+    text-align: right;
+    margin-bottom: 50px;
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 50px;
+    margin-right: 100px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: relative; /* Parent position */
+    transition: all 1s ease-in-out;
+}
+
+.fa-solid {
+    margin-left: 20px;
+    padding-left: 100px;
+}
+
+.search {
+    background-color: lightgray;
+    border-radius: 50px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute; /* Parent position change to inner child(div) as absolute */
+    left: 0px;
+    width: 0;
+    background-color: coral;
+    height: 2px;
+    bottom: -5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.fa-solid {
+    color: #ececec;
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
+/* Main */
+main {
+    background-color: lightgrey;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.hero {
+    width: 100%;
+    padding: 30px;
+    border: 4.5px solid #000;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    background-color: coral;
+}
+
+.hero:hover {
+    background-color: #000;
+    color: white;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .nav-logo {
+        left: 50px; /* Adjust logo position for smaller screens */
+    }
+
+    .nav-links {
+        margin: 16% 5% 2% 0%; /* Adjust margin for smaller screens */
+    }
+
+    .search-container {
+        width: 200px; /* Reduce search bar width */
+    }
+
+    .hero {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-logo {
+        left: 20px; /* Further adjust logo position for mobile */
+    }
+
+    .hamburger-menu {
+        margin-right: 50px;
+        display: block; /* Show hamburger menu on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 11vh;
+        left: 0;
+        background-color: #000000;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when menu is toggled */
+    }
+
+    .search-container {
+        width: 100%; /* Full width for search bar on mobile */
+    }
+
+    .hero {
+        padding: 15px; /* Further reduce padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 10px; /* Minimal padding for very small screens */
+    }
+
+    .nav-links a {
+        font-size: 1.2rem; /* Smaller font size for nav links */
+        margin-right: 20px; /* Reduce margin for nav links */
+    }
+
+    .search {
+        font-size: 0.9rem; /* Smaller font size for search bar */
+    }
+
+    .nav-logo img{
+        width: 100%;
+        height: 95px;
+    }
+
+}

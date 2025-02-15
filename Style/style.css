@@ -1,0 +1,1196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added to include padding and border in the element's total width and height */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    overflow-X: hidden;
+    width: 100%; /* Prevents horizontal scrolling */
+}
+
+/* Navigation */
+nav {
+    padding-top: 10px;
+    background-color: #000000;
+    color: #ececec;
+    padding: 10px;
+    height: 11vh;
+    width: 100%;
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Vertically center items */
+    justify-content: end;
+    position: fixed;
+    top: 0px;
+    border-bottom: 2px solid white;
+}
+
+.nav-logo {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+
+.hamburger-menu{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+.search {
+    width: 200px;
+    padding: 10px 50px;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    font-family: Titillium Web;
+    font-size: 1.5rem;
+}
+
+.nav-links a {
+    color: #ececec;
+    text-align: right;
+    margin-bottom: 50px;
+    font-family: Titillium Web;
+    margin-right: 100px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: relative; /* Parent position */
+    transition: all 1s ease-in-out;
+}
+
+.nav-links a::after {
+    content: ''; /**/
+    position: absolute; /* Parent position change to inner child(div) as absolute */
+    left: 0px;
+    width: 0;
+    background-color: coral;
+    height: 2px;
+    bottom: -5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ************************************** */
+/* Hero Section */
+/* Main */
+main {
+    margin-top: 11vh;
+    background-color: rgb(131, 129, 129);
+    padding: 10px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 10vh;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    box-shadow: 50px 50px 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text { /* Adjust the curve */
+    border-radius: 20px; /* Rounded corners */
+    text-align: center;
+    display: flex;
+    /* Use make content of class(.hero-text) in one line */
+}
+
+.hero-title {
+    font-family: Oswald;
+    font-size: 3rem;
+    color: #ececec;
+    padding-left: 20px;
+    word-spacing: 15px;
+    animation: welcome 2s ease-in-out; /* Call the animation */
+}
+
+.hero-title:hover {
+    color: coral;
+}
+
+/* Animation for welcome notification */
+@keyframes welcome {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+        word-spacing: 0px;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        word-spacing: 25px;
+    }
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-size: 1.5rem;
+    border-radius: 50px; /* Rounded corners */
+    margin-right: 220px;
+    margin-top: 20px;
+    font-family: Raleway;
+    color: whitesmoke;
+    padding-left: 230px;
+    animation: subtitle 4s ease-in-out; /* Call the animation */
+}
+
+i {
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.hero-text a {
+    margin-top: 15px;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.hero-text a:hover {
+    color: coral;
+}
+
+/* Animation to subtitle (Welcome message) */
+@keyframes subtitle {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+    100% {
+        opacity: 1;
+        display: visible;
+    }
+}
+
+/*                                                     */
+
+
+/* /****************************** */
+
+/* Popular Movie Section */
+.section {
+    padding: 40px 50px;
+}
+
+.section-title {
+    font-family: 'Emilys Candy';
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ececec;
+    animation: section-title 2s ease-in-out; /* Call the animation */
+}
+
+/* Animation for section title */
+@keyframes section-title {
+    0% {
+        opacity: 0;  /* Start with opacity 0 (hides the text for the movement */
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.grid {
+    grid-gap: 100px;
+    display: grid;
+    padding: 25px 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.grid-item {
+    background-color: transparent;
+    /* padding: 20px; */  /* [DISABLE] padding for grid-item (want a white box) */
+    border-radius: 10px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 80%;
+    object-fit: fill;
+    border-radius: 10px;
+    /* box-shadow: 10px 10px 10px rgba(0 , 0, 0, 0.9); */
+    transition: 1s ease-in;
+}
+
+.grid-item img:hover {
+    opacity: .5;
+    filter: drop-shadow(5px);
+}
+
+.grid-item-title {
+    font-family: 'Turret Road';
+    font-size: 2rem;
+    margin-top: 18px;
+    color: #b9b7b7;
+}
+
+.grid-item-title:hover {
+    color: coral;
+}
+
+/* Popular Stars section */
+.stars {
+    color: white;
+    text-align: center;
+    height: 37vh;
+    background-color: #000000;
+}
+
+.star-title {
+    font-size: 3rem;
+    font-family: 'Poiret One';
+    padding: -5px 50px;
+    margin-bottom: 30px;
+    animation: star-title 2s ease-in-out; /* Call the animation */
+}
+
+.star-title:hover {
+    color: coral;
+}
+
+/* Animation for star-title */
+@keyframes star-title {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 37vh;
+    margin: auto;
+    border-radius: 30px;
+    background-color: #181717;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
+    width: 100%; /* Ensure the carousel takes full width */
+}
+
+.movies {
+    flex: 0 0 auto;
+    width: 25%; /* Each movie takes 25% of the carousel width (4 movies visible at a time) */
+    text-align: center;
+}
+
+.movies img {
+    width: 50%; /* Adjust image size */
+    height: 50%;
+    border-radius: 50%; /* Circular images */
+    transition: transform 0.3s ease-in-out;
+    filter: grayscale(100%);
+
+    &:hover{
+        transform: scale(1.1); /* Slightly enlarge on hover */
+        filter: grayscale(0%); /* Remove grayscale effect */
+    }
+}
+
+.movies img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    filter: grayscale(0%); /* Remove grayscale effect */
+
+}
+
+.actor-name {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ececec;
+}
+
+.arrow {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    background: rgba(2, 2, 2, 0.7);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: wheat;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #181717;
+}
+
+.prev {
+    left: 10px;
+    padding: 10px;
+}
+
+.next {
+    right: 10px;
+    padding: 10px;
+}
+
+/* TV Shows */
+.T.v.shows {
+    background-color: red;
+    color: beige;
+}
+
+.show-title {
+    font-family: 'Poiret One';
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 120px;
+    color: beige;
+    animation: show-title 2s ease-in-out;
+}
+
+.shows {
+    padding: 20px;
+    padding-top: 50px;
+    background-color: #000000;
+    color: white;
+    position: relative;
+}
+
+.Watch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: beige;
+    border-radius: 10px;
+    padding-bottom: 250px;
+    transition: 0.5s ease-in-out;
+}
+
+.trending {
+    font-size: 1.5rem;
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+    position: relative;
+}
+
+.watch-content {
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 20px; /* Adjust the gap between image and text */
+}
+
+.Watch img {
+    width: 550px;
+    height: 450px;
+    border-radius: 10%;
+}
+
+.watch-detail {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 40px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.watch-detail h3 {
+    font-family: 'Poiret One';
+    font-size: 4rem;
+    color: white;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+.watch-detail h3:hover {
+    color: rgb(63, 32, 32);
+}
+
+.season {
+    font-family: 'Poiret One';
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 0px;
+    padding: 25px;
+}
+
+.season:hover {
+    color: rgb(87, 45, 45);
+}
+
+.gener {
+    font-family: 'Allan';
+    font-size: 1.6rem;
+    background-color: rgb(197, 9, 9);
+    color: white;
+    margin-bottom: 0px;
+    margin: 50px;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.gener:hover {
+    color: rgb(87, 45, 45);
+}
+
+.par-details {
+    font-family: Times, serif;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    padding: 30px;
+    font-weight: lighter;
+}
+
+.watch-btn {
+    position: absolute;
+    bottom: 280px;
+    right: 150px;
+    border: none;
+    background-color: firebrick;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+}
+
+.watch-btn:hover {
+    background-color: rgb(206, 6, 6);
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out 0.5s;
+}
+
+/* Login Form */
+.login {
+    background-color: #181717;
+    color: white;
+    text-align: center;
+    padding: 50px 100px;
+    height: 250px;
+    border-top: 2px solid white;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+}
+
+.login:hover {
+    box-shadow: -100px 50px 50px rgba(235, 8, 8, 0.7);
+}
+
+.login h2 {
+    font-family: 'Poiret One';
+    font-size: 3rem;
+    color: darkred;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+.login h2:hover {
+    color: white;
+}
+
+form {
+    display: inline-block;
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+
+input {
+    margin: 5px;
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+label {
+    color: rgb(228, 219, 219);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-right: 120px;
+}
+
+label:hover {
+    color: firebrick;
+}
+
+.submit-btn {
+    background-color: firebrick;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    margin-left: -10px;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: rgb(206, 6, 6);
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    position: relative; /* Fixes the footer at the bottom */
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 10px 10px; /* Adjust padding for better spacing */
+}
+
+.footer-container {
+    text-align: center;
+}
+
+/* Media Query for max-width 414px and max-height 896px */
+@media (max-width: 414px) and (max-height: 896px) {
+    * {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    body {
+        font-size: 0.875rem; /* 14px to rem */
+    }
+
+    nav {
+        justify-content: space-between; /* Align items to the start and end */
+        padding: 0.625rem 1.25rem; /* 10px 20px to rem */
+        position: relative; /* Ensure nav is positioned correctly */
+    }
+
+    .nav-logo {
+        left: 0.625rem; /* 10px to rem */
+    }
+
+    .nav-logo img {
+        height: 8vh; /* Adjusted logo size for mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+    }
+
+    /* Hamburger Menu for Mobile */
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #ececec;
+        position: absolute;
+        top: 1.25rem; /* 20px to rem */
+        right: 1.25rem; /* 20px to rem */
+        z-index: 1000; /* Ensure it's above other elements */
+    }
+
+    /* Show links when hamburger menu is clicked */
+    .nav-links.active {
+        display: flex;
+        flex-direction: column-reverse; /* Stack links vertically */
+        position: absolute;
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: #000000;
+        color: white;
+        padding: 1.25rem; /* 20px to rem */
+        gap: 0.625rem; /* 10px to rem */
+        border-bottom: 0.125rem solid white; /* 2px to rem */
+        animation: slideDown 0.5s ease-in-out; /* Smooth slide-down animation */
+        z-index: 999; /* Ensure it's above other content */
+    }
+
+    .nav-links a {
+        font-size: 1.2rem; /* Adjusted font size for mobile */
+        padding: 0.625rem; /* 10px to rem */
+        text-align: center; /* Center-align the links */
+        color: #ececec; /* Ensure text color is visible */
+        text-decoration: none; /* Remove underline */
+    }
+
+    .nav-links a:hover {
+        color: firebrick; /* Hover effect */
+    }
+
+    .search {
+        display: none; /* Hide search bar on mobile */
+    }
+
+    /* Slide-down animation for mobile menu */
+    @keyframes slideDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-1.25rem); /* -20px to rem */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    .hero-title {
+        font-size: 1.2rem; /* Smaller font size */
+    }
+
+    .hero-subtitle {
+        font-size: 1rem; /* Smaller font size */
+        margin-top: 5px;
+        margin-right: 10px; /* Adjusted for smaller screens */
+        padding-left: 10px; /* Adjusted for smaller screens */
+    }
+
+    .hero-text a {
+        font-size: .75rem; /* Smaller font size */
+        margin-right: 5px;
+    }
+
+    .section-title {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    .grid {
+        grid-gap: 10px; /* Smaller gap for smaller screens */
+        padding: 10px 0px; /* Adjusted padding for smaller screens */
+    }
+
+    .grid-item-title {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .star-title {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    .container {
+        height: 300px; /* Adjusted height for smaller screens */
+        border-radius: 20px; /* Adjusted for smaller screens */
+        transition: background-color 0.3s ease-in-out; /* Smooth background color change */
+        background-color: #181717; /* Default background color */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    
+    }
+    .carousel{
+        height: 300px; /* Adjusted height for smaller screens */
+        margin-bottom: 10px; /* Adjusted margin for smaller screens */
+        padding: 10px 20px; /* Adjusted padding for smaller screens */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        overflow-y: hidden; /* Hide vertical scrollbar */
+    }
+    .movies {
+        width: 50%; /* Adjusted for smaller screens */
+    }
+
+    .actor-name {
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    .show-title {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    .trending {
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    .watch-content{
+        display: block;
+    }
+
+    .Watch img {
+        width: 100%; /* Adjusted for smaller screens */
+        height: 100%; /* Adjusted for smaller screens */
+    }
+    .watch-detail h3 {
+        font-size: 2rem; /* Smaller font size */
+        padding-left: 10px; /* Adjusted for smaller screens */
+    }
+
+    .season {
+        font-size: 1.5rem; /* Smaller font size */
+        padding-left: 10px; /* Adjusted for smaller screens */
+    }
+
+    .gener {
+        font-size: 1rem; /* Smaller font size */
+        padding: 15px 15px; /* Adjusted padding for smaller screens */
+        margin: 10px; /* Adjusted margin for smaller screens */
+    }
+
+    .par-details {
+        font-size: .75rem; /* Smaller font size */
+    }
+
+    .watch-btn {
+        margin-top: 20px;
+        position: relative;
+        bottom: 0px; /* Adjusted for smaller screens */
+        left: 10px; /* Adjusted for smaller screens */
+        padding: 10px 15px; /* Adjusted padding for smaller screens */
+    }
+
+    .login {
+        padding: 20px; /* Adjusted padding for smaller screens */
+        height: auto; /* Auto height for smaller screens */
+        border-top-left-radius: 50px; /* Adjusted for smaller screens */
+        border-top-right-radius: 50px; /* Adjusted for smaller screens */
+    }
+
+    .login h2 {
+        font-size: 2rem; /* Smaller font size */
+        padding-left: 10px; /* Adjusted for smaller screens */
+    }
+
+    .submit-btn {
+        margin-right: 30px;
+        padding: 10px 15px; /* Adjusted padding for smaller screens */
+    }
+
+    .footer {
+        padding: 5px; /* Adjusted padding for smaller screens */
+    }
+}
+/* ***********************************************************  */
+
+
+
+
+
+/* *********************************************************** */
+    @media (min-width: 896px) and (max-width: 1200px) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Include padding and border in element dimensions */
+        }
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000000;
+            overflow-x: hidden;
+            width: 100%; /* Prevent horizontal scrolling */
+        }
+    
+        /* Navigation */
+        nav {
+            padding: 10px;
+            background-color: #000000;
+            color: #ececec;
+            height: 11vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            border-bottom: 2px solid white;
+        }
+    
+        .nav-logo {
+            position: absolute;
+            top: 0;
+            left: 150px;
+        }
+
+
+        .hamburger-menu {
+            display: none; /* Hide hamburger menu on tablet */
+        }
+    
+        input  {
+            display: none;
+        }
+
+        .glass{
+            display: none;
+        }
+        .nav-links {
+            display: flex;
+            margin: 16% 10% 2% 0%;
+            gap: 20px;
+        }
+    
+        .nav-links a {
+            color: #ececec;
+            font-family: 'Titillium Web', sans-serif;
+            text-decoration: none;
+            font-size: 1.5rem;
+            position: relative;
+            transition: all 0.5s ease-in-out;
+        }
+    
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 0;
+            background-color: coral;
+            height: 2px;
+            bottom: -5px;
+            transition: all 0.5s ease-in-out;
+        }
+    
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+    
+        /* Main */
+        main {
+            margin-top: 11vh;
+            background-color: rgb(131, 129, 129);
+            padding: 10px 20px;
+        }
+    
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 20vh;
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        }
+    
+        .hero-text {
+            border-radius: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .hero-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem; /* Adjusted for tablet */
+            color: #ececec;
+            padding-left: 20px;
+            word-spacing: 15px;
+            animation: welcome 2s ease-in-out;
+        }
+    
+        .hero-title:hover {
+            color: coral;
+        }
+    
+        @keyframes welcome {
+            0% {
+                opacity: 0;
+                transform: translateX(-400px);
+                word-spacing: 0;
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+                word-spacing: 25px;
+            }
+        }
+    
+        .hero-subtitle {
+            font-size: 1.2rem; /* Adjusted for tablet */
+            border-radius: 50px;
+            margin-right: 50px;
+            margin-top: 50px;
+            font-family: 'Raleway', sans-serif;
+            color: whitesmoke;
+            padding-left: 50px;
+            animation: subtitle 4s ease-in-out;
+        }
+    
+        @keyframes subtitle {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    
+        .hero-text a {
+            margin-top: 15px;
+            margin-right: 10px;
+            font-size: 1.2rem; /* Adjusted for tablet */
+            color: whitesmoke;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+    
+        .hero-text a:hover {
+            color: coral;
+        }
+    
+        /* Popular Movie Section */
+        .section {
+            padding: 20px 30px;
+        }
+    
+        .section-title {
+            font-family: 'Emilys Candy', cursive;
+            text-transform: uppercase;
+            font-size: 2rem; /* Adjusted for tablet */
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ececec;
+            animation: section-title 2s ease-in-out;
+        }
+    
+        @keyframes section-title {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    
+        .grid {
+            grid-gap: 30px; /* Adjusted for tablet */
+            display: grid;
+            padding: 25px 30px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusted for tablet */
+            grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+        }
+    
+        .grid-item {
+            background-color: transparent;
+            border-radius: 10px;
+        }
+    
+        .grid-item img {
+            width: 100%;
+            height: 80%;
+            object-fit: fill;
+            border-radius: 10px;
+            transition: 1s ease-in;
+        }
+    
+        .grid-item img:hover {
+            opacity: 0.5;
+            filter: drop-shadow(5px);
+        }
+    
+        .grid-item-title {
+            font-family: 'Turret Road', cursive;
+            font-size: 1.5rem; /* Adjusted for tablet */
+            margin-top: 18px;
+            color: #b9b7b7;
+        }
+    
+        .grid-item-title:hover {
+            color: coral;
+        }
+    
+        /* Popular Stars Section */
+        .stars {
+            color: white;
+            text-align: center;
+            height: 37vh;
+            background-color: #000000;
+        }
+    
+        .star-title {
+            font-size: 2.5rem; /* Adjusted for tablet */
+            font-family: 'Poiret One', cursive;
+            margin-bottom: 30px;
+            animation: star-title 2s ease-in-out;
+        }
+    
+        .star-title:hover {
+            color: coral;
+        }
+    
+        @keyframes star-title {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    
+        .container {
+            position: relative;
+            width: 100%;
+            height: 37vh;
+            margin: auto;
+            border-radius: 30px;
+            background-color: #181717;
+        }
+    
+        .carousel {
+            display: flex;
+            justify-content: space-around;
+            transition: transform 0.5s ease-in-out;
+            gap: 10px;
+        }
+    
+        .movies {
+            width: 25%;
+            flex: 0 0 auto;
+            text-align: center;
+        }
+    
+        .movies:hover {
+            color: coral;
+        }
+    
+        .movies img {
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            filter: grayscale(100%);
+        }
+    
+        .movies img:hover {
+            opacity: 1.5;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 2);
+            transform: translateY(-5px);
+            filter: grayscale(0%);
+        }
+    
+        .actor-name {
+            margin-top: 10px;
+            font-size: 1.2rem; /* Adjusted for tablet */
+            font-family: 'Merienda', cursive;
+        }
+    
+        .arrow {
+            position: absolute;
+            top: 55%;
+            transform: translateY(-50%);
+            background: rgba(2, 2, 2, 0.7);
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 24px;
+            color: wheat;
+        }
+    
+        .arrow:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #181717;
+        }
+    
+        .prev {
+            left: 10px;
+            padding: 10px;
+        }
+    
+        .next {
+            right: 10px;
+            padding: 10px;
+        }
+    
+        /* TV Shows Section */
+        .shows {
+            padding: 20px;
+            padding-top: 50px;
+            background-color: #000000;
+            color: white;
+            position: relative;
+        }
+    
+        .show-title {
+            font-family: 'Poiret One', cursive;
+            font-size: 2.5rem; /* Adjusted for tablet */
+            text-align: center;
+            padding-top: 120px;
+            color: beige;
+            animation: show-title 2s ease-in-out;
+        }
+    
+        @keyframes show-title {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    
+        .Watch {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: beige;
+            border-radius: 10px;
+            padding-bottom: 250px;
+            transition: 0.5s ease-in-out;
+        }
+    
+        .trending {
+            font-size: 1.5rem;
+            padding: 20px;
+            background-color: #000000;
+            color: white;
+            position: relative;
+        }
+    
+        .watch-content {
+            padding-left: 50px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    
+        .Watch img {
+            width: 450px; /* Adjusted for tablet */
+            height: 350px; /* Adjusted for tablet */
+            border-radius: 10%;
+        }
+    
+        .watch-detail {
+            font-size: 1.2rem; /* Adjusted for tablet */
+            color: white;
+            margin-bottom: 40px;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+    
+        .watch-detail h3 {
+            font-family: 'Poiret One', cursive;
+            font-size: 3rem; /* Adjusted for tablet */
+            color: white;
+            padding-left: 50px;
+            margin-bottom: 20px;
+        }
+    
+        .watch-btn{
+            position: absolute;
+            bottom: 250px;
+            right: 150px;
+        }
+        .watch-detail h3:hover {
+            color: rgb(63, 32, 32);
+        }
+    
+        .season {
+            font-family: 'Poiret One', cursive;
+            font-size: 2rem; /* Adjusted for tablet */
+            color: white;
+            margin-bottom: 0;
+            padding: 25px;
+        }
+    
+        .season:hover {
+            color: rgb(87, 45, 45);
+        }
+    }
